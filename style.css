@@ -1,0 +1,183 @@
+/* Colors and fonts */
+body {
+  background: #F7F9FC;
+  color: #575F7D;
+  font-family: 'Lora', serif;
+  font-size: 17px;
+  font-weight: lighter;
+  background-attachment: fixed;
+  
+}
+::selection{
+	background-color:deeppink;
+	color:white;
+}
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  color: #575F7D;
+  font-size: 32px;
+  font-weight: 900;
+}
+h1  #h1span{ /* pour écarter les fleurs au survol du titre */
+	padding-left: 0;
+	padding-right: 0;
+	transition:1s;
+}
+h1:hover  #h1span{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+h2 {
+  color: #51adcf;
+  font-size: 21px;
+  font-weight: lighter;
+  font-weight: 500;
+  border-radius:1000px;
+  border-bottom : solid 3px lightgray;
+}
+a {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: #c060a1;
+  font-weight: 600;
+  font-size: 16px;
+}
+a:hover {
+  color: black;
+}
+
+p {
+  text-align: left;
+  transition:1s;
+  border-radius:50rem;
+}
+p:hover{
+	padding-left : 5px;
+}
+
+/* Custom design with class (99% of your design) */
+.container {
+  width: 700px;
+  margin: 40px auto;
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
+
+.card-white {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ; /* ombres realistes issue de https://mdbootstrap.com/docs/jquery/css/shadows/ */
+  border-radius: 4px;
+  margin: 20px 0px;
+  text-align: center;
+  transition: 1s;
+}
+.card-white:first-child{
+	border-top-left-radius: 10rem;
+	border-top-right-radius: 10rem;
+}
+.card-white:last-child{
+	border-bottom-left-radius: 10rem;
+	border-bottom-right-radius: 10rem;
+}
+
+.card-white:hover {
+box-shadow: 0 27px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22) ;
+}
+.card-white:hover p{ /* pour que quand on survole une card-white, ses paragraphes deviennent noirs */
+	color:black;
+}
+ 
+ #profileimage{
+	 /* #f884 = rose clair et transparent, dernier chiffre = transparence */
+	 transition:1s;
+	 box-shadow : -10px -10px #f884  ,  10px 10px #f884   ,  -10px 10px #f884   ,  10px -10px #f884 ;
+ }
+ #profileimage:hover{
+	 box-shadow : -20px 0#f888  ,  20px 0 #f888   ,  0 20px #f888   ,  0 -20px #f888 ;
+ }
+.img-circle {
+  border-radius: 50%;
+}
+.btn-blue {
+  display: inline-block;
+  vertical-align: top;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 4px;
+  border-radius: 50rem;
+  transition :1s;
+  
+  background-color: #51adcf;
+  background: #2193b0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* trouvé sur https://uigradients.com/#CoolBlues  */
+
+}
+.btn-blue:hover {
+  background: black;
+  color: white;
+}
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.list-inline li {
+  display: inline;
+  padding: 10px;
+}
+.list-inline i {
+  font-size: 50px;
+  /*color: rgb(230, 230, 230);*/
+  transition:1s;
+}
+.list-inline i:hover {
+  color: black;
+}
+
+/* Design adjustments using id (1% design remaining) */
+#introduction p {
+  margin-bottom: 40px;
+}
+#introduction p::first-letter{
+	font-size:30px;
+	font-weigh:bold;
+}
+#tothetop{
+	display:block;
+	color:#51adcf;
+	background-color: white;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    transition: 1s;
+	font-size:30px;
+	padding:15px;
+	text-align:center;
+	border-radius:1000px;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+}
+#tothetop:hover {
+  box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24) , 0 17px 50px 0 rgba(0,0,0,0.19);
+}
